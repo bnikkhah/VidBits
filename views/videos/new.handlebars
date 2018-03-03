@@ -1,0 +1,28 @@
+<h1>Save a video</h1>
+<form action="/videos" method="post">
+    <i class="fa fa-link"></i>
+    <label for="url">URL (Supports <u><i class="fab fa-youtube"></i> <strong>Youtube</strong></u>, <u><i class="fab fa-vimeo"></i> <strong>Vimeo</strong></u> and <u><strong>Dailymotion!</strong></u>)</label>
+    {{#with video.errors.url as |error|}}
+        <p class="error">{{error.message}}</p>
+    {{/with}}
+    <input name="url" id="video-url"/>
+
+    <i class="fa fa-tag"></i>
+    <label for="title">Title</label>
+    {{#with video.errors.title as |error|}}
+        <p class="error">{{error.message}}</p>
+    {{/with}}
+    <input name="title" id="video-title"/>
+
+    <i class="fa fa-pencil-alt"></i>
+    <label for="description">Description</label>
+    {{#with video.errors.description as |error|}}
+        <p class="error">{{error.message}}</p>
+    {{/with}}
+    <textarea name="description" id="video-description" maxlength="300"></textarea>
+    <div class="character-limit">
+      <span id="charNum">300</span> characters left
+    </div>
+
+    <input type="submit" class="button" value="Submit" id="submit-button"/>
+</form>

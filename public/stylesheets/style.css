@@ -1,0 +1,244 @@
+body {
+  background-color: #222222;
+  font-family: 'Montserrat', sans-serif;
+  color: #7a797a;
+  text-align: center;
+}
+
+h1 {
+  user-select: none;
+  color: #ff9b34;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+  position: relative;
+  outline: none;
+}
+
+.video-title a:before {
+  content: '';
+  position: absolute;
+  height: 1px;
+  width: 40%;
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  background-color: #ff9b34;
+  -webkit-transition: width .3s;
+  -o-transition: width .3s;
+  transition: width .3s;
+}
+
+.video-card a:hover:before {
+  width: 100%;
+}
+
+.video-description {
+  color: #ff9b34;
+}
+
+.character-limit {
+  padding: 10px 0;
+  text-align: center;
+}
+
+a img:active {
+  -webkit-transform: translateY(1px);
+  -ms-transform: translateY(1px);
+  transform: translateY(1px);
+}
+
+.button {
+  padding: 15px 32px;
+  background-color: #ff9b34;
+  border: 1px solid transparent;
+  cursor: pointer;
+  color: #fff;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  display: inline-block;
+  -webkit-transition: background-color .3s, color .3s, border .3s;
+  -o-transition: background-color .3s, color .3s, border .3s;
+  transition: background-color .3s, color .3s, border .3s;
+}
+
+.button:hover {
+  background-color: transparent;
+  border: 1px solid #ff9b34;
+  color: #ff9b34;
+}
+
+.button:active {
+  -webkit-transform: translateY(1px);
+  -ms-transform: translateY(1px);
+  transform: translateY(1px);
+}
+
+.title-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.contents-container {
+  width: 855px;
+  margin: 0 auto;
+}
+
+iframe {
+  box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+}
+
+.video-card {
+  margin: 20px 0;
+}
+
+.video-player {
+  width: 100%;
+  height: 500px;
+}
+
+.video-title {
+  padding: 9px;
+}
+
+/* Add page - form partial*/
+
+form {
+  background-color: transparent;
+  margin: 0 auto;
+  width: 80%;
+  padding-top: 30px;
+  padding-bottom: 10px;
+}
+
+form input[name=title] {
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 40px;
+  margin-top: 5px;
+  width: 75%;
+  height: 30px;
+  font-family: Montserrat;
+  font-size: 16px;
+  padding: 5px;
+  outline-color: transparent;
+}
+
+form input[name=url] {
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 40px;
+  margin-top: 5px;
+  width: 75%;
+  height: 30px;
+  font-family: Montserrat;
+  font-size: 16px;
+  padding: 5px;
+  outline-color: transparent;
+}
+
+form input {
+  background-color: transparent;
+  border: 0;
+  border-bottom: 1px solid #ff9b34;
+  color: #7a797a;
+  opacity: 0.4;
+  -webkit-transition: opacity .3s;
+  -o-transition: opacity .3s;
+  transition: opacity .3s;
+}
+
+form input[type=submit] {
+  opacity: 1;
+  outline: none;
+}
+
+form input:focus,
+form textarea:focus {
+  opacity: 1;
+}
+
+label {
+  user-select: none;
+}
+
+form textarea {
+  display: block;
+  opacity: 0.4;
+  margin: 10px auto;
+  width: 75%;
+  background-color: transparent;
+  height: 100px;
+  font-family: Montserrat;
+  font-size: 16px;
+  padding: 5px;
+  resize: none;
+  overflow-x: hidden;
+  outline-color: transparent;
+  border: 0;
+  color: #7a797a;
+  border-bottom: 1px solid #ff9b34;
+  -webkit-transition: opacity .3s;
+  -o-transition: opacity .3s;
+  transition: opacity .3s;
+}
+
+/* Show page */
+
+.button-wrapper {
+  display: flex;
+  justify-content: space-between;
+  -ms-align-items: center;
+  align-items: center;
+}
+
+.delete-form {
+  margin: 0;
+  width: auto;
+  padding: 0;
+}
+
+.delete-form .button {
+  background-color: #7a797a;
+}
+
+.delete-form .button:hover {
+  background-color: transparent;
+  color: #7a797a;
+  border: 1px solid #7a797a;
+}
+
+.input-button {
+  text-align: center;
+  background-color: #ff9b34;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-decoration: none;
+  margin: 0 auto;
+  font-size: 16px;
+  width: 166px;
+  display: block;
+  cursor: pointer;
+  border: 1px solid transparent;
+}
+
+.input-button:hover {
+  background-color: transparent;
+  border: 1px solid #ff9b34;
+  color: #ff9b34;
+}
+
+.input-button:active {
+  transform: translateY(1px);
+}
+
+.error {
+  color: #ff7f7f;
+}

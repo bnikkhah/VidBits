@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>VidBits</title>
+    <link rel="icon" type="image/ico" href="/img/favicon.ico">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,500" rel="stylesheet">
+    <link rel="stylesheet" href="/stylesheets/style.css">
+  </head>
+  <body>
+    <div class="title-container">
+      <div class="title-logo">
+        <a href="/" title="VidBits">
+          <img src="/img/logo.svg" alt="VidBits">
+        </a>
+      </div>
+    </div>
+
+    {{{ body }}}
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+    <script
+    src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+    <script>
+      $(document).ready(function() {
+        $("textarea[maxlength]").bind('input propertychange', function() {
+            var maxLength = $(this).attr('maxlength');
+            if ($(this).val().length > maxLength) {
+                $(this).val($(this).val().substring(0, maxLength));
+            } else {
+              $('#charNum').text(maxLength - $(this).val().length);
+            }
+        })
+      });
+    </script>
+  </body>
+</html>
